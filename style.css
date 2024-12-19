@@ -1,0 +1,395 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Container */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+/* Logo */
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #555;
+  font-size: 1rem;
+  position: relative;
+  white-space: nowrap;
+  /* Prevents text wrapping */
+}
+
+.navbar a:hover {
+  color: #000;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  /* Parent container for absolute positioning */
+}
+
+.dropdown-content {
+  display: none;
+  /* Initially hidden */
+  position: absolute;
+  top: 100%;
+  /* Place dropdown below its parent */
+  left: 0;
+  width: 180px;
+  /* Fixed width */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1000;
+  /* Ensure it's above other elements */
+}
+ /* ........ icon colours .........*/
+.dropdown-content .todo {
+  color: purple;
+  margin: 10px;
+}
+.dropdown-content .Calendar {
+  color: skyblue;
+  margin: 10px;
+}
+.dropdown-content .remind {
+  color: rgb(207, 204, 22);
+  margin: 10px;
+}
+.dropdown-content .plan {
+  color: rebeccapurple;
+  margin: 10px;
+}
+.dropdown-content .his {
+  color: yellowgreen;
+  margin: 10px;
+}
+.dropdown-content .team {
+  color: red;
+  margin: 10px;
+}
+.dropdown-content .blog {
+  color: burlywood;
+  margin: 10px;
+  margin: 10px;
+}
+
+
+.dropdown-content a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.dropdown-content.show {
+  display: block;
+  /* Class to show dropdown */
+}
+
+
+/* Dropdown Active Class */
+.dropdown-content.show {
+  display: block;
+}
+
+/* Auth Links */
+.auth-links {
+  display: flex;
+
+  gap: 1rem;
+  align-items: center;
+}
+
+.auth-links a {
+  text-decoration: none;
+  color: #555;
+
+  transition: color 0.3s ease;
+  /* Smooth color transition */
+}
+
+
+.auth-links a:hover {
+  color: #000;
+
+  text-decoration: underline;
+}
+
+.register-btn {
+  background: transparent;
+  border: 1px solid #000;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background-color: #000;
+  color: #fff;
+  transition: 0.3s ease;
+}
+.menu-bar {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #333;
+  position: absolute;
+  right: 2rem;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 1;
+}
+
+.text-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 50%;
+  text-align: center;
+  z-index: 1;
+}
+
+.text-content h1 {
+  font-size: 4rem;
+  color: #111;
+  margin-bottom: 10px; 
+  padding-left: 3rem;
+  text-align: left;
+}
+
+.text-content p {
+  margin: 20px 0;
+  font-size: 1.5em;
+  color: #555;
+
+  
+}
+
+ /* the button */
+.wrap {
+  display: flex;
+  /* Make it a flex container */
+  justify-content: center;
+  /* Center content horizontally */
+  align-items: center;
+  /* Center content vertically */
+  flex-direction: column;
+  /* Stack children vertically */
+  margin-top: 20px;
+  /* Add spacing from text if needed */
+}
+
+.button {
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 4px;
+  color: black;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  height: 40px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  /* Add a gap between text and button */
+  padding: 0 22px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+.roll-text {
+  display: block;
+  position: relative;
+  transition: all 420ms cubic-bezier(.175, .885, .32, 1.275);
+}
+
+.roll-text:last-child {
+  color: #fff;
+}
+
+.rollover:hover .roll-text:first-child {
+  margin-top: -38px;
+}
+
+.image-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  width: 100%; /* Make the footer span the full width */
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow elements to wrap if needed */
+  justify-content: space-between;
+}
+
+.footer-logo svg {
+  margin: 10px;
+  fill: #ADADAD;
+  
+}
+
+.footer-logo svg:hover {
+  fill: black; /* Changes color on hover */
+}
+
+
+
+/* Responsive Navbar (Mobile) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .menu-bar {
+    display: block;
+    /* Show menu bar */
+  }
+
+  .navbar {
+    display: none;
+    /* Hidden by default on mobile */
+    flex-direction: column;
+    gap: 3rem;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 1rem;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar.show {
+    display: flex;
+    /* Show navbar on toggle */
+  }
+
+  .dropdown-content {
+    position: relative;
+    /* For mobile dropdowns */
+    box-shadow: none;
+    background-color: transparent;
+    width: auto;
+  }
+
+  .dropdown-content a {
+    padding-left: 1.5rem;
+    /* Indent links */
+  }
+
+  #auth-links {
+    display: none;
+  }
+
+  .main {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-content,
+  .image-content {
+    flex: none;
+    width: 100%;
+  }
+
+
+  .image-content {
+    order: -1;
+    /* Move the image content to appear first */
+    width: 100%;
+  }
+
+  .text-content {
+    width: 100%;
+    order: 0;
+    /* Default order */
+  }
+  .text-content h1 {
+    display: flex; /* Align text on a single line */
+ position: relative;
+  }
+  .text-content p {
+    margin: 20px 0;
+    font-size: 1.5em;
+    color: #555;
+    text-align: center;
+    padding-right: 3rem;
+
+  }
+
+
+  footer {
+    background-color: #fff;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 1rem;
+    color: #555;
+    padding-left: 0;
+    flex-direction: column;
+  }
+  
+  
+}
+
+
+
+
+
+
+
+
+
+
+
